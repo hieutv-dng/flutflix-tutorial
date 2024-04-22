@@ -1,31 +1,29 @@
-class Movie {
-  String title;
-  String backDropPath;
-  String originalTitle;
-  String overview;
-  String posterPath;
-  String releaseDate;
-  double voteAverage;
+import 'package:freezed_annotation/freezed_annotation.dart';
 
-  Movie({
-    required this.title,
-    required this.backDropPath,
-    required this.originalTitle,
-    required this.overview,
-    required this.posterPath,
-    required this.releaseDate,
-    required this.voteAverage,
-  });
+part 'movie.freezed.dart';
+part 'movie.g.dart';
 
-  factory Movie.fromJson(Map<String, dynamic> json) {
-    return Movie(
-      title: json["title"],
-      backDropPath: json["backdrop_path"],
-      originalTitle: json["original_title"],
-      overview: json["overview"],
-      posterPath: json["poster_path"],
-      releaseDate: json["release_date"],
-      voteAverage: json["vote_average"].toDouble(),
-    );
-  }
+@freezed
+class MovieResponse with _$MovieResponse {
+  factory MovieResponse({
+    @JsonKey(name: 'results') @Default([]) List<Movie> results,
+  }) = _MovieResponse;
+  const MovieResponse._();
+
+  factory MovieResponse.fromJson(Map<String, dynamic> json) =>
+      _$MovieResponseFromJson(json);
+}
+
+@freezed
+class Movie with _$Movie {
+  factory Movie({
+    @JsonKey(name: 'title') @Default('') String title,
+    @JsonKey(name: 'overview') @Default('') String overview,
+    @JsonKey(name: 'poster_path') @Default('') String posterPath,
+    @JsonKey(name: 'release_date') @Default('') String releaseDate,
+    @JsonKey(name: 'vote_average') @Default(0.0) double voteAverage,
+  }) = _Movie;
+  const Movie._();
+
+  factory Movie.fromJson(Map<String, dynamic> json) => _$MovieFromJson(json);
 }

@@ -1,8 +1,18 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutflix/components/index.dart';
+import 'package:flutflix/data/index.dart';
+import 'package:flutflix/firebase_options.dart';
 import 'package:flutflix/my_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:get/get.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  Get.put<AuthService>(AuthService());
   runApp(const MyApp());
 }
 
@@ -12,7 +22,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Flutflix',
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: MyColors.scaffoldBgColor,
@@ -20,7 +30,8 @@ class MyApp extends StatelessWidget {
           backgroundColor: MyColors.scaffoldBgColor,
         ),
       ),
-      home: const HomePage(),
+      home: const MainPage(),
+      builder: EasyLoading.init(),
     );
   }
 }

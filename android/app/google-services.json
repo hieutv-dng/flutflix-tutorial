@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "348203897162",
+    "project_id": "flutflix-tutorial",
+    "storage_bucket": "flutflix-tutorial.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:348203897162:android:1409fbaf5279eb25a3b1b3",
+        "android_client_info": {
+          "package_name": "com.hieutv.flutflix"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "348203897162-088qbn0ui89d0vjj3ujtov745aoionb4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxxWlMT-HF2lkpLjA3I7wXDowZhGoGC1M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "348203897162-088qbn0ui89d0vjj3ujtov745aoionb4.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "348203897162-b46q3sjsl61ch2hm7iv8rgs3oq83lp86.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hieutv.flutflix-tutorial"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

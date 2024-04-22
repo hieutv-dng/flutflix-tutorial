@@ -1,2 +1,3 @@
-export 'api/api.dart';
+export 'api/movie_api.dart';
 export 'models/movie.dart';
+export 'auth/auth_service.dart';

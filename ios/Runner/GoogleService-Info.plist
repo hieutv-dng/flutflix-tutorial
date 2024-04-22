@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>348203897162-k60asik3f3rlq8t1s40l1fgi8edb2kr0.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.348203897162-k60asik3f3rlq8t1s40l1fgi8edb2kr0</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCIoCpDD3CAobZBNCylQ9p7JRZvBdnXRZs</string>
+	<key>GCM_SENDER_ID</key>
+	<string>348203897162</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.hieutv.flutflix</string>
+	<key>PROJECT_ID</key>
+	<string>flutflix-tutorial</string>
+	<key>STORAGE_BUCKET</key>
+	<string>flutflix-tutorial.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:348203897162:ios:6ae4f344f02c2cc2a3b1b3</string>
+</dict>
+</plist>

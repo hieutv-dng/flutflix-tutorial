@@ -19,9 +19,9 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-    trendingMovies = Api().getTrendingMovies();
-    topRatedovies = Api().getTopRatedMovies();
-    upcomingMovies = Api().getUpcomingMovies();
+    trendingMovies = MovieApi().getTrendingMovies();
+    topRatedovies = MovieApi().getTopRatedMovies();
+    upcomingMovies = MovieApi().getUpcomingMovies();
   }
 
   @override
@@ -74,7 +74,7 @@ class _HomePageState extends State<HomePage> {
               );
             } else if (snapshot.hasData) {
               return TrendingSlider(
-                snapshot: snapshot,
+                movies: snapshot.data!,
               );
             } else {
               return const Center(child: CircularProgressIndicator());
@@ -103,7 +103,7 @@ class _HomePageState extends State<HomePage> {
               );
             } else if (snapshot.hasData) {
               return MoviesSlider(
-                snapshot: snapshot,
+                movies: snapshot.data!,
               );
             } else {
               return const Center(child: CircularProgressIndicator());
@@ -132,7 +132,7 @@ class _HomePageState extends State<HomePage> {
               );
             } else if (snapshot.hasData) {
               return MoviesSlider(
-                snapshot: snapshot,
+                movies: snapshot.data!,
               );
             } else {
               return const Center(child: CircularProgressIndicator());
