@@ -97,35 +97,17 @@ class _ProfilePageState extends State<ProfilePage> {
   }
 
   Widget _buildFavoriteMovies(BuildContext context) {
-    return Column(
+    return const Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Padding(
+        Padding(
           padding: EdgeInsets.all(16),
           child: Text(
             'My favorite movies',
             style: TextStyle(fontSize: 25),
           ),
         ),
-        FutureBuilder(
-          future: trendingMovies,
-          builder: (context, snapshot) {
-            if (snapshot.hasError) {
-              return Center(
-                child: Text(snapshot.error.toString()),
-              );
-            } else if (snapshot.hasData) {
-              return FavoriteMoviesGrid(
-                movies: snapshot.data!,
-              );
-            } else {
-              return const Padding(
-                padding: EdgeInsets.only(top: 32),
-                child: Center(child: CircularProgressIndicator()),
-              );
-            }
-          },
-        ),
+        FavoriteMoviesGrid(),
       ],
     );
   }

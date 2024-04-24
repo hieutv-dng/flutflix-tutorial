@@ -13,6 +13,7 @@ Future<void> main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
   Get.put<AuthService>(AuthService());
+  Get.put<FavoriteService>(FavoriteService());
   runApp(const MyApp());
 }
 

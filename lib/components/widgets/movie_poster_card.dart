@@ -1,6 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutflix/components/index.dart';
-import 'package:flutflix/constants.dart';
 import 'package:flutflix/data/index.dart';
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
@@ -31,7 +30,7 @@ class MoviePosterCard extends StatelessWidget {
       child: ClipRRect(
         borderRadius: BorderRadius.circular(12),
         child: CachedNetworkImage(
-          imageUrl: '${Constants.imagePath}${movie.posterPath}',
+          imageUrl: movie.posterPathUrl,
           fit: BoxFit.cover,
           width: size.width,
           height: size.height,
