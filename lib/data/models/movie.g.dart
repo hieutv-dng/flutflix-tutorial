@@ -26,7 +26,7 @@ _$MovieImpl _$$MovieImplFromJson(Map<String, dynamic> json) => _$MovieImpl(
       posterPath: json['poster_path'] as String? ?? '',
       releaseDate: json['release_date'] as String? ?? '',
       voteAverage: (json['vote_average'] as num?)?.toDouble() ?? 0.0,
-      timestamp: json['timestamp'] as int?,
+      timestamp: (json['timestamp'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$$MovieImplToJson(_$MovieImpl instance) =>
